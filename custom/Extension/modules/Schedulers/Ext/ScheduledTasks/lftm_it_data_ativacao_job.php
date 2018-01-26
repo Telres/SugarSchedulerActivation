@@ -13,7 +13,7 @@ function lftm_it_data_ativacao_job() {
 	$sql .= "ger01_gerenciamentocliente_contacts_c T2 ON T1.id = T2.ger01_gere60bccliente_idb AND T2.deleted = 0 INNER JOIN ";
 	$sql .= "contacts T3 ON T3.id = T2.ger01_gerenciamentocliente_contactscontacts_ida AND T3.deleted = 0 INNER JOIN ";
 	$sql .= "contacts_cstm T4 ON T4.id_c = T3.id ";
-	$sql .= "WHERE T0.lftm_mes_referencia_c IS NOT NULL;";
+	$sql .= "WHERE T0.lftm_mes_referencia_c IS NOT NULL ORDER BY T3.first_name;";
 
 	$cnt = 0;
 	$conn = $GLOBALS['db']->getConnection();
